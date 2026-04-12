@@ -371,7 +371,7 @@ export default function App() {
                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
-                  e.currentTarget.src = "https://ibb.co.com/rR6R7WYd";
+                  e.currentTarget.src = "https://i.ibb.co.com/LXtXkGmN/1766358560221.jpg";
                 }}
               />
             </div>
