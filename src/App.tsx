@@ -297,9 +297,10 @@ export default function App() {
             <Button variant="ghost" size="icon" className="rounded-full md:hidden">
               <Sparkles className="h-5 w-5 text-indigo-600" />
             </Button>
-            <Button size="sm" className="bg-indigo-600 hover:bg-indigo-700 rounded-full px-6 font-bold shadow-lg shadow-indigo-200">
-              <Download className="mr-2 h-4 w-4" />
-              Resume
+            <Button size="sm" className="bg-indigo-600 hover:bg-indigo-700 rounded-full px-6 font-bold shadow-lg shadow-indigo-200" asChild>
+              <a href="https://drive.google.com/file/d/1U06eRLSGCqX0cWurjsCUDs6D8E20swqE/view?usp=sharing" target="_blank" rel="noreferrer">
+                Resume
+              </a>
             </Button>
           </div>
         </div>
@@ -365,7 +366,7 @@ export default function App() {
           >
             <div className="relative z-10 h-72 w-72 overflow-hidden rounded-[2.5rem] border-[12px] border-white bg-white shadow-2xl md:h-96 md:w-96">
               <img 
-                src="https://wildannazhif.github.io/assets/img/wildan.jpg" 
+                src="/1766358560221.jpg" 
                 alt={userData.name}
                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                 referrerPolicy="no-referrer"
