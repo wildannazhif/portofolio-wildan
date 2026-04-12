@@ -371,7 +371,7 @@ export default function App() {
                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
-                  e.currentTarget.src = "https://picsum.photos/seed/wildan/800/800";
+                  e.currentTarget.src = "/1766358560221.jpg";
                 }}
               />
             </div>
