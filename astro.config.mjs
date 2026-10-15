@@ -3,10 +3,16 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 
-// GitHub Pages project site: https://wildannazhif.github.io/portofolio-wildan/
+// Deploy target: Vercel (served at the domain root — NO base path).
+// `site` follows the real deployment URL that Vercel injects at build
+// time, so canonical URLs + sitemap stay correct on every deployment
+// (preview or production) without hardcoding a domain.
+const site = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "https://portofolio-wildan.vercel.app/";
+
 export default defineConfig({
-  site: "https://wildannazhif.github.io/portofolio-wildan/",
-  base: "/portofolio-wildan/",
+  site,
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
