@@ -2,76 +2,61 @@
 import { education, organisations } from "../data/portfolio.ts";
 ---
 
-<div class="cv-lazy mx-auto grid max-w-6xl gap-12 px-4 pb-16 sm:px-6 lg:grid-cols-2 lg:gap-10">
-  <section id="education" aria-labelledby="education-heading" class="scroll-mt-28">
-    <h2 id="education-heading" class="text-3xl font-bold tracking-tight text-black sm:text-4xl">Education</h2>
-    <div class="mt-3 h-1.5 w-20 rounded-full bg-rose-500" aria-hidden="true"></div>
-    <div class="mt-8 space-y-5">
+<div class="cv-lazy mx-auto grid max-w-6xl gap-14 px-4 pb-14 sm:px-6 lg:grid-cols-2 lg:gap-12">
+  <section id="education" aria-labelledby="education-heading" class="scroll-mt-8">
+    <div class="border-t-2 border-black pt-4">
+      <h2 id="education-heading" class="text-3xl font-bold tracking-tight text-black sm:text-4xl">Education</h2>
+    </div>
+    <ol class="mt-2">
       {
         education.map((edu) => (
-          <article class="relative rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-7">
-            <span class="absolute -left-px top-8 h-12 w-1.5 rounded-full" style={`background:${edu.accent}`} aria-hidden="true" />
-            <div class="flex items-start justify-between gap-3">
-              <div>
-                <h3 class="text-lg font-bold text-black">{edu.institution}</h3>
-                <p class="mt-1 font-bold text-rose-600">{edu.degree}</p>
-              </div>
-              {edu.gpa && (
-                <span class="shrink-0 rounded-lg bg-rose-50 px-3 py-1 text-sm font-bold text-rose-600">GPA {edu.gpa}</span>
-              )}
-            </div>
-            <p class="mt-4 text-xs font-bold uppercase tracking-widest text-neutral-500">
-              {edu.period} · {edu.location}
+          <li class="border-t border-neutral-300 py-6 first:border-t-0">
+            <p class="tnum text-sm font-bold text-black">
+              {edu.period} <span class="font-medium text-neutral-600">· {edu.location}</span>
             </p>
-            <ul class="mt-5 space-y-2.5">
+            <h3 class="mt-2 text-xl font-bold text-black">{edu.institution}</h3>
+            <p class="mt-0.5 text-base font-bold text-black">
+              {edu.degree}
+              {edu.gpa && <span class="tnum font-medium text-neutral-700"> — GPA {edu.gpa}</span>}
+            </p>
+            <ul class="mt-4 space-y-2">
               {edu.highlights.map((h) => (
-                <li class="flex items-start gap-2.5 text-sm font-medium leading-relaxed text-neutral-700">
-                  <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400" aria-hidden="true" />
+                <li class="flex gap-2.5 text-base leading-relaxed text-neutral-800">
+                  <span aria-hidden="true" class="shrink-0 text-black">—</span>
                   <span>{h}</span>
                 </li>
               ))}
             </ul>
-          </article>
+          </li>
         ))
       }
-    </div>
+    </ol>
   </section>
 
-  <section id="leadership" aria-labelledby="leadership-heading" class="scroll-mt-28">
-    <h2 id="leadership-heading" class="text-3xl font-bold tracking-tight text-black sm:text-4xl">Leadership</h2>
-    <div class="mt-3 h-1.5 w-20 rounded-full bg-emerald-500" aria-hidden="true"></div>
-    <div class="mt-8 space-y-4">
+  <section id="leadership" aria-labelledby="leadership-heading" class="scroll-mt-8">
+    <div class="border-t-2 border-black pt-4">
+      <h2 id="leadership-heading" class="text-3xl font-bold tracking-tight text-black sm:text-4xl">Leadership</h2>
+    </div>
+    <ol class="mt-2">
       {
         organisations.map((org) => (
-          <article class="rounded-3xl border border-neutral-200 bg-white p-5 sm:p-6">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <div class="flex items-center gap-3">
-                <span
-                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-sm font-bold text-white"
-                  style={`background:${org.accent}`}
-                  aria-hidden="true"
-                >
-                  {org.name.slice(0, 2)}
-                </span>
-                <div>
-                  <h3 class="font-bold text-black">{org.name}</h3>
-                  <p class="text-xs font-bold uppercase tracking-wider text-emerald-700">{org.role}</p>
-                </div>
-              </div>
-              <span class="text-xs font-bold text-neutral-500">{org.period}</span>
-            </div>
-            <p class="mt-3 hidden text-sm leading-relaxed text-neutral-600 lg:block">{org.description}</p>
-            <ul class="mt-3 space-y-2">
+          <li class="border-t border-neutral-300 py-6 first:border-t-0">
+            <p class="tnum text-sm font-bold text-black">
+              {org.period} <span class="font-medium text-neutral-600">· {org.role}</span>
+            </p>
+            <h3 class="mt-2 text-xl font-bold text-black">{org.name}</h3>
+            <p class="mt-3 max-w-[62ch] text-base leading-relaxed text-neutral-800">{org.description}</p>
+            <ul class="mt-4 space-y-2">
               {org.achievements.map((ach) => (
-                <li class="flex items-start gap-2 text-sm leading-relaxed text-neutral-700">
-                  <span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-emerald-500" aria-hidden="true" />
+                <li class="flex gap-2.5 text-base leading-relaxed text-neutral-800">
+                  <span aria-hidden="true" class="shrink-0 text-black">—</span>
                   <span>{ach}</span>
                 </li>
               ))}
             </ul>
-          </article>
+          </li>
         ))
       }
-    </div>
+    </ol>
   </section>
 </div>
