@@ -7,7 +7,7 @@ Rebuild v2 (`rebuild/astro-lightweight`) — coding ulang total dari versi React
 - **Tailwind CSS v4** — satu stylesheet kecil, tanpa runtime.
 - **TypeScript 5** + `astro check`.
 - **Sharp** — foto dioptimasi saat build ke AVIF/WebP multi-ukuran.
-- GitHub Pages via Actions (`.github/workflows/deploy.yml`).
+- **Vercel** — deploy otomatis dari Git (preview per branch, production dari branch utama).
 
 ## Kenapa jauh lebih ringan di smartphone
 | v1 (React) | v2 (Astro) |
@@ -25,12 +25,14 @@ navigasi mobile tanpa hamburger-JS (scroll horizontal murni CSS),
 ## Jalankan lokal
 ```bash
 npm install
-npm run dev      # http://localhost:4321/portofolio-wildan/
+npm run dev      # http://localhost:4321/
 npm run build    # output ke dist/
 npm run check    # typecheck Astro
 ```
 
 ## Deploy
 Push ke branch `rebuild/astro-lightweight` (atau `main` setelah merge) →
-GitHub Actions build → GitHub Pages di
-https://wildannazhif.github.io/portofolio-wildan/
+Vercel otomatis build + deploy (preview untuk branch, production untuk
+branch utama). `site`/canonical mengikuti `VERCEL_URL` yang disuntikkan
+Vercel saat build, jadi tidak ada domain yang di-hardcode di config.
+Kalau pakai custom domain, set sebagai production domain di Vercel saja.
