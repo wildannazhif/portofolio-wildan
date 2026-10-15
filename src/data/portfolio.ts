@@ -8,15 +8,15 @@
 export const profile = {
   name: "Wildan Nazhif Irsyadi",
   shortName: "Wildan Nazhif I.",
-  title: "Statistics Graduate & Data Analyst",
+  title: "Statistics Undergraduate & Data Analyst",
   email: "wildannazhifirsyadi@gmail.com",
-  location: "Pebayuran, Kab. Bekasi, Indonesia",
+  location: "Kab. Bekasi, Indonesia",
   linkedin: "https://linkedin.com/in/wildannazh",
   github: "https://github.com/wildannazhif",
   resume:
     "https://drive.google.com/file/d/1U06eRLSGCqX0cWurjsCUDs6D8E20swqE/view?usp=sharing",
   summary:
-    "Wildan is a Statistics graduate from Institut Teknologi Sepuluh Nopember (ITS) with a strong interest in data analysis, statistical modeling, and quantitative problem-solving. Proficient in R, Python, SPSS, Microsoft Excel, Power BI, and Tableau, with experience in data cleaning, data validation, exploratory data analysis (EDA), regression analysis, and data visualization. Achieved recognition in the Satria Data competition and possesses strong analytical and attention-to-detail skills in processing and interpreting data. Wildan is also interested in Artificial Intelligence (AI), particularly AI Agents, and continuously develops his skills in technology and data analytics.",
+    "Wildan is a dedicated Statistics undergraduate at Institut Teknologi Sepuluh Nopember (ITS) with a specialized focus on data analysis, statistical modeling, and quantitative processing. He possesses robust technical proficiency in R, Python, SPSS, and Excel, with hands-on experience in data cleaning, exploratory data analysis (EDA), and regression. Known for his detail-oriented approach and strong problem-solving abilities, Wildan is committed to producing structured analytical reports that drive data-informed decision-making.",
 } as const;
 
 export const stats = [
@@ -37,16 +37,6 @@ export type Experience = {
 };
 
 export const experiences: Experience[] = [
-  {
-    company: "Pusdatin Kemenhub",
-    location: "Jakarta, Indonesia",
-    role: "Statistisi",
-    period: "2026 – Present",
-    accent: "#0891b2",
-    description:
-      "Pusat Data dan Informasi (Pusdatin) Kementerian Perhubungan — penempatan melalui program MagangHub Kementerian Ketenagakerjaan (Kemnaker).",
-    achievements: [],
-  },
   {
     company: "PT PAL Indonesia",
     location: "Surabaya, Indonesia",
@@ -113,8 +103,8 @@ export const education: Education[] = [
     institution: "Institut Teknologi Sepuluh Nopember",
     location: "Surabaya, Indonesia",
     degree: "Bachelor of Statistics",
-    period: "Aug 2022 – Sep 2026",
-    gpa: "3.31/4.00",
+    period: "Aug 2022 – Sep 2026 (Expected)",
+    gpa: "3.36/4.00",
     accent: "#9333ea",
     highlights: [
       "Awardee Ministry of Religion Achievement Santri Scholarship 2022",
