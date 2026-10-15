@@ -19,13 +19,6 @@ export const profile = {
     "Wildan is a dedicated Statistics undergraduate at Institut Teknologi Sepuluh Nopember (ITS) with a specialized focus on data analysis, statistical modeling, and quantitative processing. He possesses robust technical proficiency in R, Python, SPSS, and Excel, with hands-on experience in data cleaning, exploratory data analysis (EDA), and regression. Known for his detail-oriented approach and strong problem-solving abilities, Wildan is committed to producing structured analytical reports that drive data-informed decision-making.",
 } as const;
 
-export const stats = [
-  { value: "500+", label: "Alat ukur & mesin las dimonitor di PT PAL" },
-  { value: "150+", label: "UMKM disurvei di Sidoarjo" },
-  { value: "2.200+", label: "Masjid & 2.227 Majlis Taklim divalidasi" },
-  { value: "112", label: "Penerima beasiswa dipimpin di CSSMoRA ITS" },
-] as const;
-
 export type Experience = {
   company: string;
   location: string;
