@@ -1,0 +1,39 @@
+---
+import { nav, profile } from "../data/portfolio.ts";
+---
+
+<header class="sticky top-0 z-50 border-b border-neutral-200 bg-white/95">
+  <div class="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
+    <a href="#" class="flex min-h-11 items-center gap-2.5" aria-label="Back to top">
+      <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-indigo-600 text-lg font-bold text-white">W</span>
+      <span class="leading-none">
+        <span class="block text-base font-bold tracking-tight text-black">{profile.shortName}</span>
+        <span class="block text-[10px] font-bold uppercase tracking-[0.18em] text-indigo-600">Statistics</span>
+      </span>
+    </a>
+    <a
+      href={profile.resume}
+      target="_blank"
+      rel="noreferrer"
+      class="flex min-h-11 shrink-0 items-center rounded-full bg-indigo-600 px-5 text-sm font-bold text-white"
+    >
+      Resume
+    </a>
+  </div>
+  <nav aria-label="Sections" class="border-t border-neutral-100">
+    <ul class="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-4 py-1.5 sm:px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      {
+        nav.map((item) => (
+          <li class="shrink-0">
+            <a
+              href={item.href}
+              class="flex min-h-10 items-center rounded-full px-3.5 text-sm font-bold text-neutral-700 hover:bg-indigo-50 hover:text-indigo-700"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

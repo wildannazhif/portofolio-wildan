@@ -1,0 +1,53 @@
+---
+import { skills } from "../data/portfolio.ts";
+---
+
+<section id="skills" aria-labelledby="skills-heading" class="cv-lazy mx-auto max-w-6xl scroll-mt-28 px-4 pb-16 sm:px-6">
+  <div class="rounded-3xl bg-neutral-900 px-6 py-8 text-white sm:px-10 sm:py-10">
+    <h2 id="skills-heading" class="text-2xl font-bold tracking-tight sm:text-3xl">Skill Set &amp; Achievements</h2>
+    <div class="mt-3 h-1 w-12 rounded-full bg-indigo-500" aria-hidden="true"></div>
+    <div class="mt-8 grid gap-10 lg:grid-cols-3">
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400">Technical Stack</h3>
+        <ul class="mt-5 flex flex-wrap gap-2" aria-label="Technical skills">
+          {
+            skills.hard.map((skill) => (
+              <li class="rounded-lg bg-white/10 px-3 py-1.5 text-xs font-bold text-white ring-1 ring-white/15">{skill}</li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400">Achievements</h3>
+        <ul class="mt-5 space-y-3">
+          {
+            skills.achievements.map((ach) => (
+              <li class="flex gap-2.5 text-sm font-medium leading-relaxed text-neutral-300">
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-500" aria-hidden="true" />
+                <span>{ach}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400">Soft Skills</h3>
+          <ul class="mt-5 flex flex-wrap gap-2" aria-label="Soft skills">
+            {
+              skills.soft.map((skill) => (
+                <li class="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-neutral-300">{skill}</li>
+              ))
+            }
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400">Interests</h3>
+          <p class="mt-5 flex flex-wrap gap-x-3 gap-y-2 text-sm font-bold text-indigo-400">
+            {skills.interests.map((interest) => <span>#{interest}</span>)}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
