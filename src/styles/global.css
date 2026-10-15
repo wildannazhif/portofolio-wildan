@@ -1,21 +1,22 @@
+/* Hallmark · macrostructure: Long Document · genre: editorial-brutalist
+ * pre-emit critique: P5 H5 E4 S5 R5 V5 (Execution 4 until live visual check)
+ * Palette: Tailwind's own black/neutral tokens + ink/paper base below.
+ * No gradients, no shadows, no pills, no cards, no banner blocks.
+ */
 @import "tailwindcss";
 
 @theme {
-  /* Plain system fonts only — zero webfont downloads (user preference). */
+  /* Plain system fonts only — zero webfont downloads (user preference).
+     UI-UX-Pro-Max suggested Caveat/Quicksand; rejected to preserve the
+     user's standing Arial-only rule (Hallmark pre-flight: preserve). */
   --font-sans: Arial, "Helvetica Neue", Helvetica, system-ui, -apple-system,
     "Segoe UI", sans-serif;
-  --color-ink: #000;
-  --color-ink-soft: #141414;
-  --color-ink-mute: #2e2e2e;
-  --color-line: #e5e5e5;
-  --color-accent: #4f46e5;
-  --color-accent-dark: #3730a3;
-  --color-paper: #fafafa;
 }
 
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
 }
 
 body {
@@ -23,13 +24,18 @@ body {
   color: #000;
   background: #fff;
   text-rendering: optimizeSpeed;
+  overflow-x: clip;
+}
+
+/* Tabular figures for dates, years, counts (Hallmark: tabular data needs tabular-nums). */
+.tnum {
+  font-variant-numeric: tabular-nums;
 }
 
 /* Visible keyboard focus — no JS needed. */
 :where(a, button):focus-visible {
-  outline: 2px solid #4f46e5;
+  outline: 2px solid #000;
   outline-offset: 2px;
-  border-radius: 4px;
 }
 
 /* Below-the-fold sections render lazily. intrinsic-size avoids layout shift. */
@@ -39,7 +45,7 @@ body {
 }
 
 ::selection {
-  background: #4f46e5;
+  background: #000;
   color: #fff;
 }
 
