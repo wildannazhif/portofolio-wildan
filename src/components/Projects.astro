@@ -2,27 +2,23 @@
 import { projects } from "../data/portfolio.ts";
 ---
 
-<!--
-  Index, not cards: a numbered archive list — No. / Title + method / Year —
-  separated by hairlines. No gradient dots, no fake link buttons (v1 had
-  ExternalLink icons pointing nowhere).
--->
-<section id="projects" aria-labelledby="projects-heading" class="cv-lazy mx-auto max-w-6xl scroll-mt-8 px-4 pb-14 sm:px-6">
-  <div class="border-t-2 border-black pt-4">
-    <h2 id="projects-heading" class="text-3xl font-bold tracking-tight text-black sm:text-4xl">Key Projects</h2>
-  </div>
-  <ol class="mt-2">
+<section id="projects" aria-labelledby="projects-heading" class="cv-lazy mx-auto max-w-6xl scroll-mt-28 px-4 pb-16 sm:px-6">
+  <h2 id="projects-heading" class="text-3xl font-bold tracking-tight text-black sm:text-4xl">Key Projects</h2>
+  <div class="mt-3 h-1.5 w-20 rounded-full bg-amber-500" aria-hidden="true"></div>
+  <ul class="mt-8 space-y-2.5">
     {
-      projects.map((project, i) => (
-        <li class="grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-3 border-t border-neutral-300 py-4 first:border-t-0 sm:gap-5">
-          <span class="tnum text-sm font-bold text-neutral-500">{String(i + 1).padStart(2, "0")}</span>
-          <div>
-            <h3 class="text-base font-bold leading-snug text-black sm:text-lg">{project.title}</h3>
-            <p class="mt-0.5 text-sm leading-relaxed text-neutral-600">{project.method}</p>
+      projects.map((project) => (
+        <li class="flex flex-col gap-1 rounded-2xl border border-neutral-200 bg-white px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+          <div class="flex items-start gap-3">
+            <span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-indigo-600" aria-hidden="true" />
+            <div>
+              <h3 class="text-base font-bold leading-tight text-black sm:text-lg">{project.title}</h3>
+              <p class="mt-0.5 text-xs font-medium text-neutral-600 sm:text-sm">{project.method}</p>
+            </div>
           </div>
-          <span class="tnum shrink-0 text-sm font-bold text-black">{project.year}</span>
+          <span class="shrink-0 pl-6 font-mono text-xs font-bold text-neutral-400 sm:pl-0">{project.year}</span>
         </li>
       ))
     }
-  </ol>
+  </ul>
 </section>
