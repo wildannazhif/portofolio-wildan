@@ -38,6 +38,16 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    company: "Pusdatin Kemenhub",
+    location: "Jakarta, Indonesia",
+    role: "Statistisi",
+    period: "2026 – Present",
+    accent: "#0891b2",
+    description:
+      "Pusat Data dan Informasi (Pusdatin) Kementerian Perhubungan — penempatan melalui program MagangHub Kementerian Ketenagakerjaan (Kemnaker).",
+    achievements: [],
+  },
+  {
     company: "PT PAL Indonesia",
     location: "Surabaya, Indonesia",
     role: "Quality Assurance Intern",
